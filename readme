@@ -1,0 +1,38 @@
+Google-Drive-Panel is a front end for the command line Google Drive 
+client Grive. Google Drive Panel lets you sync any folder with your 
+Google Drive, it could be a folder under your home directory, or on
+your desktop, or a whole partition. Best yet, it it can be named 
+anything you like. It puts a icon in your panel, giving you basic 
+controls over adding files and syncing files. 
+
+Usage is simple, to start run 'google-drive-panel' (without  quotes)
+into the terminal, follow setup, and close terminal. If you would like 
+it to start at login, add 'google-drive-panel' to startup applications.
+
+To install from Github source:
+git clone https://github.com/Benknis/Google-Drive-Panel.git
+cd ./Google-Drive-Panel
+sudo chown -R root google-drive-panel/
+sudo chown -R :root google-drive-panel/
+dpkg -b google-drive-panel/
+
+Google-Drive-Panel has only been tested on Ubuntu 13.04 and 12.10, and 
+may not work with other versions or distros. Feel free to modify to make
+work on your computer.
+
+Google-Drive-Panel is released under the gpl-2.0 license. 
+http://www.gnu.org/licenses/gpl-2.0.txt
+
+Things to be changed in the future versions:
+	-Code to be made cleaner
+	-use of yad is to be faded out
+	-all around revision
+If you have any suggestions or concerns, email me at benknisley@gmail.com
+
+Grive is an awesome Google Drive client, its website is:
+http://www.lbreda.com/grive/
+
+Google Drive is a trademark of Google Inc. Use of this trademark is 
+subject to Google Permissions.
+
+Have a nice day.

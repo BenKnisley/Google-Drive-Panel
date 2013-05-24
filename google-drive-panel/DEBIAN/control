@@ -1,0 +1,14 @@
+Package: google-drive-panel
+Version: 1.0
+Architecture: all
+Maintainer: Ben Knisley <benknisley@gmail.com>
+Installed-Size: 50
+Depends: python, gksu
+Priority: optional
+Description: Google Drive Panel is a front end for the Google Drive client Grive.
+ Google-Drive-Panel is a front end for the command line Google Drive 
+ client Grive. Google Drive Panel lets you sync any folder with your 
+ Google Drive, it could be a folder under your home directory, or on
+ your desktop, or a whole partition. Best yet, it it can be named 
+ anything you like. It puts a icon in your panel, giving you basic 
+ controls over adding files and syncing files. 
