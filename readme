@@ -15,7 +15,7 @@ cd ./Google-Drive-Panel
 sudo chown -R root google-drive-panel/
 sudo chown -R :root google-drive-panel/
 dpkg -b google-drive-panel/
-the just install with software center, or other means.
+Then just install with software center, or other means.
 
 Google-Drive-Panel has only been tested on Ubuntu 13.04 and 12.10, and 
 may not work with other versions or distros. Feel free to modify to make
