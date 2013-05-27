@@ -32,7 +32,7 @@ class AppIndicatorExample:
 		self.ind.set_menu(self.menu)
         
     def openfol(self, widget, data=None):
-		os.system('nautilus ' + drive_dir)
+		os.system('xdg-open ' + drive_dir)
 
     def upload(self, widget, data=None):
 		os.system("/usr/share/google-drive-panel/newfile.py")
