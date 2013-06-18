@@ -3,8 +3,7 @@ import pygtk
 pygtk.require('2.0')
 import os, gtk, appindicator, time, string
 
-drive_dir = open('/usr/share/google-drive-panel/drive_dir').read().strip()
-
+drive_dir = open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()
 
 class AppIndicatorExample:
     def __init__(self):

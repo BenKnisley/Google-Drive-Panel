@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 from subprocess import Popen, PIPE, STDOUT
-drive_dir = open('/usr/share/google-drive-panel/drive_dir').read().strip()
+drive_dir = open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()
 outstream = Popen('yad --dnd --width 200 --height 175 --title "Drag File Here"', shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
 output = outstream.stdout
 y = ''

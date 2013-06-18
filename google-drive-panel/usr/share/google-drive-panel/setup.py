@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #//////////Importent Stuff////////////
-import os, time, webbrowser
+import os, time, webbrowser, getpass
 from subprocess import Popen, PIPE, STDOUT
 
 #Run setup_two, installs Yad and Grive, which is importent being this is a grive frontend
@@ -17,7 +17,7 @@ drive_dir = yadout.read().strip()
 drive_dir = '"' + drive_dir + '/"'
 
 #Writes drive_dir to file
-open('/usr/share/google-drive-panel/drive_dir', 'w').write(drive_dir)
+open('/home/' + getpass.getuser() + '/.drive_dir', 'w+').write(drive_dir)
 
 #starts grive and opens browser to input auth code
 griveprocess = Popen("cd " + drive_dir + " && grive -a --dry-run",
