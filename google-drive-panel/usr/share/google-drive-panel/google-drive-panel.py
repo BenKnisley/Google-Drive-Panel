@@ -11,7 +11,7 @@ def help():
 #Starts Setup
 def setup():
 	print 'Setting up, may take a while'
-	os.system('/usr/share/google-drive-panel/setup.py > /dev/null &')
+	os.system('/usr/share/google-drive-panel/setup.py > /dev/null')
 	exit()
 
 #Starts Gdrive panel
