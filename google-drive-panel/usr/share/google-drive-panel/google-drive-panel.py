@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, sys
+import os, sys, getpass
 
 #Help Message, needs more added
 def help():
@@ -23,7 +23,7 @@ def start():
 try:	#Tests to see if there is any command args
     sys.argv[1]
 except IndexError:	#if there isn't any comm args
-	if len(open('/usr/share/google-drive-panel/drive_dir').read().strip()) < 3:		#Test if setup is run yet
+	if len(open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()) < 3:		#Test if setup is run yet
 		setup()		 #If it has hasn't run, run it
 	else:
 		start()		#If it has, run gdrive panel
