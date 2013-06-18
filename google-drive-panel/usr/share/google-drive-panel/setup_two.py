@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os
+import os, getpass
 
 #Check for root
 if os.geteuid() != 0:

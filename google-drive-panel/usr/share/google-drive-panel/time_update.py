@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, time
+import os, time, getpass
 
 drive_dir = open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()
 
