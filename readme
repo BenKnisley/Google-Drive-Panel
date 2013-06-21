@@ -9,7 +9,8 @@ Usage is simple, to start run 'google-drive-panel' (without  quotes)
 into the terminal, follow setup, and close terminal. If you would like 
 it to start at login, add 'google-drive-panel' to startup applications.
 
-To install from Github source:
+To install from Github source (on a debian system, because this makes a
+deb package, otherwise just move files where they need to go):
 git clone https://github.com/Benknis/Google-Drive-Panel.git
 cd ./Google-Drive-Panel
 sudo chown -R root google-drive-panel/
@@ -17,8 +18,11 @@ sudo chown -R :root google-drive-panel/
 dpkg -b google-drive-panel/
 Then just install with software center, or other means.
 
-Google-Drive-Panel has only been tested on Ubuntu 13.04 and 12.10, and 
-may not work with other versions or distros. Feel free to modify to make
+Google-Drive-Panel has been tested on the following 
+Ubuntu 13.04
+Ubuntu 12.10
+Mint 15
+May not work with other versions or distros. Feel free to modify to make
 work on your computer.
 
 Google-Drive-Panel is released under the gpl-2.0 license. 
@@ -28,6 +32,14 @@ Things to be changed in the future versions:
 	-Code to be made cleaner
 	-use of yad is to be faded out
 	-all around revision
+
+I am working on the following:
+	-Adding an exit button, not sure why I did not do this before.
+	-Add a goto google drive button
+	-Make icon change when sycning, and offline and such.
+	-Making a graphical install
+	-Making a Graphical setting dialog
+
 If you have any suggestions or concerns, email me at benknisley@gmail.com
 
 Grive is an awesome Google Drive client, its website is:
