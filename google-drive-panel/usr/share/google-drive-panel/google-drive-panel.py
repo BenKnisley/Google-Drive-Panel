@@ -4,8 +4,14 @@ import os, os.path, sys, getpass
 #Help Message, needs more added
 def help():
 	print('usage:')
-	print('google-drive-panel [--setup]')
-	print('--setup  enters setup')
+	print('google-drive-panel [--setup]  [--update]')
+	print('--setup    enters setup')
+	print('--update    updates to Google Drive... duh')
+	exit()
+
+#update
+def update():
+	os.system('cd ' + drive_dir + ' && grive')
 	exit()
 
 #Starts Setup
@@ -30,6 +36,5 @@ except IndexError:	#if there isn't any comm args
 else:	#if there is comm args
 	if sys.argv[1] == '--setup':	#if the user wants setup
 		setup()
-	else:	#otherwise, display help
-		help()
-
+	if sys.argv[1] == '--update':	#if the user wants to update
+		update()
