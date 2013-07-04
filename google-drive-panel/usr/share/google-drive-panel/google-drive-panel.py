@@ -16,6 +16,8 @@ def update():
 
 #Starts Setup
 def setup():
+	if os.path.isfile('/home/' + getpass.getuser() + '/.drive_dir') == True:
+		os.remove('/home/' + getpass.getuser() + '/.drive_dir')
 	print 'Setting up, may take a while'
 	os.system('/usr/share/google-drive-panel/setup.py > /dev/null')
 	exit()
@@ -26,6 +28,7 @@ def start():
 	print 'Google Drive Panel Started! You can close this terminal now'
 	exit()
 
+
 try:	#Tests to see if there is any command args
     sys.argv[1]
 except IndexError:	#if there isn't any comm args
@@ -33,8 +36,26 @@ except IndexError:	#if there isn't any comm args
 		setup()		 #If it has hasn't run, run it
 	else:
 		start()		#If it has, run gdrive panel
-else:	#if there is comm args
-	if sys.argv[1] == '--setup':	#if the user wants setup
-		setup()
-	if sys.argv[1] == '--update':	#if the user wants to update
+
+command = sys.argv[1]
+commands = ['--update', '--help', '--setup', '--start']
+
+if command in commands:
+
+	if command = '--update':
 		update()
+	if command = '--help':
+		help()
+	if command = '--setup':
+		setup()
+	if command = '--start':
+		start()
+
+else:
+	help()
+	exit()
+
+
+
+
+
