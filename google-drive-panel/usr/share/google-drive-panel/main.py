@@ -1,9 +1,15 @@
 #!/usr/bin/env python
 import pygtk, getpass
 pygtk.require('2.0')
-import os, gtk, appindicator, time, string
+import os, gtk, appindicator, time, string, threading
 
 drive_dir = open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()
+
+def timeupdate():
+	while True:
+		time.sleep(300)
+		os.system('cd ' + drive_dir + ' && grive')
+
 
 class AppIndicatorExample:
     def __init__(self):
@@ -48,5 +54,6 @@ def main():
 
 if __name__ == "__main__":
     indicator = AppIndicatorExample()
+    threading.Thread(target=timeupdate).start()
     main()
 

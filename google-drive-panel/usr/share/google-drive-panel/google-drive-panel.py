@@ -24,7 +24,7 @@ def setup():
 
 #Starts Gdrive panel
 def start():
-	os.system('/usr/share/google-drive-panel/main.py > /dev/null & /usr/share/google-drive-panel/time_update.py > /dev/null &')
+	os.system('/usr/share/google-drive-panel/main.py > /dev/null')
 	print 'Google Drive Panel Started! You can close this terminal now'
 	exit()
 
@@ -42,13 +42,13 @@ commands = ['--update', '--help', '--setup', '--start']
 
 if command in commands:
 
-	if command = '--update':
+	if command == '--update':
 		update()
-	if command = '--help':
+	if command == '--help':
 		help()
-	if command = '--setup':
+	if command == '--setup':
 		setup()
-	if command = '--start':
+	if command == '--start':
 		start()
 
 else:
