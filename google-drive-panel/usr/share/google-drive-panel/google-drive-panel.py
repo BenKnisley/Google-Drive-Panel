@@ -24,7 +24,7 @@ def setup():
 
 #Starts Gdrive panel
 def start():
-	os.system('/usr/share/google-drive-panel/main.py > /dev/null')
+	os.system('/usr/share/google-drive-panel/main.py > /dev/null &')
 	print 'Google Drive Panel Started! You can close this terminal now'
 	exit()
 
