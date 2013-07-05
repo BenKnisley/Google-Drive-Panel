@@ -4,7 +4,7 @@ pygtk.require('2.0')
 import os, gtk, appindicator, time, string
 
 drive_dir = open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()
-os.system("python '/usr/share/google-drive-panel/timeupdate.py'")
+
 class AppIndicatorExample:
     def __init__(self):
 		self.ind = appindicator.Indicator ("google-drive-panel", "indicator-messages", appindicator.CATEGORY_APPLICATION_STATUS)
@@ -49,4 +49,3 @@ def main():
 if __name__ == "__main__":
     indicator = AppIndicatorExample()
     main()
-
