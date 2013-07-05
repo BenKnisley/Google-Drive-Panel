@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 import os, os.path, sys, getpass
+drive_dir = open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()
+
+
 
 #Help Message, needs more added
 def help():
@@ -8,6 +11,7 @@ def help():
 	print('--setup    enters setup')
 	print('--update    updates to Google Drive... duh')
 	exit()
+
 
 #update
 def update():
