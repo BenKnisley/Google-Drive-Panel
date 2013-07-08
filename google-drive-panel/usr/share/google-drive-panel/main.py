@@ -36,11 +36,11 @@ class AppIndicatorExample:
     def upload(self, widget, data=None):
 		os.system("/usr/share/google-drive-panel/newfile.py")
 		os.system('cd ' + drive_dir + ' && grive')
-		os.system("yad --text 'Done Copying File(s)' --title 'Done'")
+		os.system("notify-send 'Done Copying File(s)'")
 
     def update(self, widget, data=None):
 		os.system('cd ' + drive_dir + ' && grive')
-		os.system("yad --text 'Done Copying File(s)' --title 'Done'")
+		os.system("notify-send 'Done Copying File(s)'")
 
 def main():
     gtk.main()
