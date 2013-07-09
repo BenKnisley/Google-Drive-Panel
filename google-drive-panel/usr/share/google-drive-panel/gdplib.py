@@ -11,9 +11,9 @@ def start(*args):#Start
 	os.system('/usr/share/google-drive-panel/main.py > /dev/null &')
 	os.system('/usr/share/google-drive-panel/timeupdate.py > /dev/null &')
 	print 'Google Drive Panel Started! You can close this terminal now'
-	return
+	exit()
 
-def add_file(*args):#Start
+def add_file(*args):
 	os.system("/usr/share/google-drive-panel/newfile.py")
 	return
 

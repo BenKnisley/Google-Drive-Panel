@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, getpass, 
+import os, getpass, sys 
 import gdplib as lib
 
 drive_dir = open('/home/' + getpass.getuser() + '/.drive_dir').read().strip()
@@ -8,9 +8,9 @@ try:
     sys.argv[1]
 except IndexError:
 	if os.path.isfile('/home/' + getpass.getuser() + '/.drive_dir') == False:
-		lib.setup()	
+		lib.setup()
 	else:
-		lib.start()	
+		lib.start()
 
 command = sys.argv[1]
 commands = ['--start','--update','--open-folder','--open-online', '--add-file', '--help', '--setup', ]
@@ -24,6 +24,7 @@ if command in commands:
 		lib.setup()
 	if command == '--start':
 		lib.start()
+		exit()
 	if command == '--open-folder':
 		lib.open_folder()
 	if command == '--open-online':
